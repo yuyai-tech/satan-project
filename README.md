@@ -8,7 +8,7 @@ whatever
 
 ## Team:
 
-Diana: "Life is short not to live it sentence"
+Diana: "Life is short not to live it"
 
 Andrea: "Hello friends" "jajajaj"
 
