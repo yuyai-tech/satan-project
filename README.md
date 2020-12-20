@@ -10,7 +10,7 @@ whatever
 
 Diana: "Life is short not to live it sentence"
 
-Andrea
+Andrea: "Hello friends"
 
 Jorch
 
