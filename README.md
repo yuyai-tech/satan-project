@@ -10,7 +10,7 @@ whatever
 
 Diana: "Life is short not to live it"
 
-Andrea: "Hello friends"
+Andrea: "Hello friends" "jajajaj"
 
 Jorch: "chch why is it english?"bvbbvb
 
