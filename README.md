@@ -9,9 +9,12 @@ whatever
 ## Team:
 
 Diana
+
 Andrea
+
 Jorch
-Juan
+
+Juan: "hello i am juan"
 
 ## Milestones:
 
