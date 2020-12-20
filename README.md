@@ -8,13 +8,13 @@ whatever
 
 ## Team:
 
-Diana: "Life is short not to live it sentence"
+Diana: "Life is short not to live it"
 
 Andrea: "Hello friends"
 
 Jorch: "chch why is it english?"bvbbvb
 
-Juan: "hello i am juan"
+Juan: "hello i am juan alsidjuawoieuwqewqewq"
 
 ## Milestones:
 
