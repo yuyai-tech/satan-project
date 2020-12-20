@@ -8,7 +8,7 @@ whatever
 
 ## Team:
 
-Diana
+Diana: "Life is short not to live it sentence"
 
 Andrea
 
