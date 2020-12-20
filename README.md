@@ -14,7 +14,7 @@ Andrea: "Hello friends" "jajajaj"
 
 Jorch: "chch why is it english?"
 
-Juan: "hello i am juan"
+Juan: "hello i am juan alsidjuawoieuwqewqewq"
 
 ## Milestones:
 
