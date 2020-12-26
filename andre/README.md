@@ -4,13 +4,11 @@ The best Ever!
 
 # What we do?
 
-whatever
+We are going to learn python
 
-## Team:
+## About me:
 
-
-
-Andrea: "Hello friends" "jajajaj"
+Hi, I am Andrea. I am ready to learn
 
 
 ## Milestones:
