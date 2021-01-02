@@ -18,10 +18,12 @@ image = [
 
 data_frame = pd.DataFrame(image)
 
+print(data_frame.shape)
+
 plt.imshow(data_frame)
 plt.show()
 
-data_folder = './ann/data/0'
+data_folder = './ann_advanced/dataset/1'
 file_name = str(random.randint(0, 10**10))
 file_path = data_folder + '/' + file_name + '.csv'
 
