@@ -51,8 +51,21 @@ plt.show()
 
 
 
+
+
 one_image_array = np.array(one_image)
 one_image_array.shape
+
+plt.imshow(one_image_array.T)
+plt.show()
+
+
+
+matmul = one_image_array.dot(one_image_array)
+plt.imshow(matmul)
+plt.show()
+
+
 
 
 
