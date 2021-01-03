@@ -83,5 +83,5 @@ plt.show()
 one_image_array = np.array(one_image)
 one_image_array.shape
 
-one_image_array.flatten()
-
+one_image_flatten = one_image_array.flatten()
+one_image_flatten.shape
