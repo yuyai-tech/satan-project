@@ -66,11 +66,15 @@ plt.imshow(matmul)
 plt.show()
 
 
-a = list(range(0, 20))
+a = [list(range(0, 20))]
 
 a_array = np.array(a)
 
 
-b_array = np.cos(a_array/19)
+b_array = np.cos(10*a_array/19)
 
 
+c_array = b_array.T.dot(b_array)
+
+plt.imshow(c_array)
+plt.show()
