@@ -78,3 +78,10 @@ c_array = b_array.T.dot(b_array)
 
 plt.imshow(c_array)
 plt.show()
+
+
+one_image_array = np.array(one_image)
+one_image_array.shape
+
+one_image_array.flatten()
+
