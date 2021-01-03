@@ -66,6 +66,11 @@ plt.imshow(matmul)
 plt.show()
 
 
+a = list(range(0, 20))
 
+a_array = np.array(a)
+
+
+b_array = np.cos(a_array/19)
 
 
