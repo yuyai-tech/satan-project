@@ -49,3 +49,10 @@ three_image = [
 plt.imshow(three_image)
 plt.show()
 
+
+
+one_image_array = np.array(one_image)
+one_image_array.shape
+
+
+
