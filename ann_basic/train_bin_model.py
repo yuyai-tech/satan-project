@@ -71,8 +71,11 @@ data_set = [
     three_image_array.flatten()
 ]
 
+# Create data set
 data_set_array = np.array(data_set)
-labels = np.array([0, 1, 0, 0])
+
+
+labels = np.array([1, 0, 0, 0])
 print(data_set_array.shape)
 
 
