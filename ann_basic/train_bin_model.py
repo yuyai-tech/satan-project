@@ -60,15 +60,15 @@ one_image_array = np.array(one_image)
 two_image_array = np.array(two_image)
 three_image_array = np.array(three_image)
 
-plt.imshow(zero_image)
+plt.imshow(zero_image_array)
 plt.show()
 
 
 data_set = [
-    zero_image.flatten(),
-    one_image.flatten(),
-    two_image.flatten(),
-    three_image.flatten()
+    zero_image_array.flatten(),
+    one_image_array.flatten(),
+    two_image_array.flatten(),
+    three_image_array.flatten()
 ]
 
 data_set_array = np.array(data_set)
