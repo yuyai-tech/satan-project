@@ -55,10 +55,10 @@ three_image = [
 
 # pre pros data
 
-zero_image = np.array(zero_image)
-one_image = np.array(one_image)
-two_image = np.array(two_image)
-three_image = np.array(three_image)
+zero_image_array = np.array(zero_image)
+one_image_array = np.array(one_image)
+two_image_array = np.array(two_image)
+three_image_array = np.array(three_image)
 
 plt.imshow(zero_image)
 plt.show()
