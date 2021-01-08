@@ -75,7 +75,7 @@ data_set = [
 data_set_array = np.array(data_set)
 
 # Label data
-labels = np.array(0, 1, 0, 0])
+labels = np.array([0, 0, 1, 0])
 print(data_set_array.shape)
 
 
@@ -85,7 +85,7 @@ X = data_set_array
 Y = labels
 
 model = Sequential()
-model.add(Dense(10, input_dim=input_dim, activation='relu'))
+model.add(Dense(100, input_dim=input_dim, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 model.summary()
@@ -101,15 +101,15 @@ model.predict(data_set_array)
 
 # test with other data
 other_one_image = [
-    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0],
+    [0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+    [0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
 ]
 
 other_two_image = [
