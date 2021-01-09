@@ -94,7 +94,18 @@ data_set = [
 
 data_set_array = np.array(data_set)
 
-# Label data
+# label data
 labels = np.array([1, 0, 0, 0, 1])
 print(data_set_array.shape)
+
+# create model
+input_dim = 10*11
+X = data_set_array
+Y = labels
+
+model = Sequential()
+model.add(Dense(100, input_dim=input_dim, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+
+model.summary()
 
