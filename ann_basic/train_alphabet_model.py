@@ -78,3 +78,19 @@ b_image_array = np.array(b_image)
 c_image_array = np.array(c_image)
 d_image_array = np.array(d_image)
 e_image_array = np.array(e_image)
+
+plt.imshow(a_image_array)
+plt.show()
+
+
+# create data set
+data_set = [
+    a_image_array.flatten(),
+    b_image_array.flatten(),
+    c_image_array.flatten(),
+    d_image_array.flatten(),
+    e_image_array.flatten(),
+]
+
+data_set_array = np.array(data_set)
+
