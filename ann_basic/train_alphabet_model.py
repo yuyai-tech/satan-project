@@ -109,3 +109,9 @@ model.add(Dense(1, activation='sigmoid'))
 
 model.summary()
 
+# train model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(X, Y, epochs=10, batch_size=1, verbose=1)
+
+# test
+model.predict(data_set_array)
