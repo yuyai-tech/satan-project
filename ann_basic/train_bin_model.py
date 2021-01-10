@@ -143,6 +143,7 @@ other_three_image = [
 
 other_one_image = np.array(other_one_image)
 other_two_image = np.array(other_two_image)
+other_three_image = np.array(other_three_image)
 
 plt.imshow(other_one_image)
 plt.show()
@@ -150,10 +151,13 @@ plt.show()
 plt.imshow(other_two_image)
 plt.show()
 
+plt.imshow(other_three_image)
+plt.show()
 
 new_data_set = [
     other_one_image.flatten(),
-    other_two_image.flatten()
+    other_two_image.flatten(),
+    other_three_image.flatten()
 ]
 
 new_data_set_array = np.array(new_data_set)
