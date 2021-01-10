@@ -86,7 +86,10 @@ Y = labels
 
 model = Sequential()
 model.add(
-    Dense(15, input_dim=input_dim, activation='relu')
+    Dense(50, input_dim=input_dim, activation='relu')
+)
+model.add(
+    Dense(50, input_dim=input_dim, activation='relu')
 )
 model.add(
     Dense(1, activation='sigmoid')
@@ -97,7 +100,7 @@ model.summary()
 
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=15, batch_size=1, verbose=1)
+model.fit(X, Y, epochs=30, batch_size=1, verbose=1)
 
 # test
 model.predict(data_set_array)
@@ -119,12 +122,12 @@ other_one_image = [
 other_two_image = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+    [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
