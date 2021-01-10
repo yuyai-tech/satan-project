@@ -92,6 +92,9 @@ model.add(
     Dense(50, input_dim=input_dim, activation='relu')
 )
 model.add(
+    Dense(50, input_dim=input_dim, activation='relu')
+)
+model.add(
     Dense(1, activation='sigmoid')
 )
 
