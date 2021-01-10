@@ -75,7 +75,7 @@ data_set = [
 data_set_array = np.array(data_set)
 
 # Label data
-labels = np.array([0, 0, 1, 0])
+labels = np.array([0, 1, 0, 0])
 print(data_set_array.shape)
 
 
@@ -85,15 +85,19 @@ X = data_set_array
 Y = labels
 
 model = Sequential()
-model.add(Dense(100, input_dim=input_dim, activation='relu'))
-model.add(Dense(1, activation='sigmoid'))
+model.add(
+    Dense(50, input_dim=input_dim, activation='relu')
+)
+model.add(
+    Dense(1, activation='sigmoid')
+)
 
 model.summary()
 
 
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=10, batch_size=1, verbose=1)
+model.fit(X, Y, epochs=20, batch_size=1, verbose=1)
 
 # test
 model.predict(data_set_array)
@@ -102,13 +106,13 @@ model.predict(data_set_array)
 # test with other data
 other_one_image = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0],
-    [0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
-    [0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
 ]
 
@@ -126,6 +130,13 @@ other_two_image = [
 
 other_one_image = np.array(other_one_image)
 other_two_image = np.array(other_two_image)
+
+plt.imshow(other_one_image)
+plt.show()
+
+plt.imshow(other_two_image)
+plt.show()
+
 
 new_data_set = [
     other_one_image.flatten(),
