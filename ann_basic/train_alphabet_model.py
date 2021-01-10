@@ -144,7 +144,14 @@ other_image_e = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
-other_image_a = np.array(other_image_a)
-other_image_e = np.array(other_image_e)
+other_image_a_array = np.array(other_image_a)
+other_image_e_array = np.array(other_image_e)
 
-new_data_set
+new_data_set = [
+    other_image_a_array.flatten(),
+    other_image_e_array.flatten()
+]
+
+new_data_set_array = np.array(new_data_set)
+
+model.predict(new_data_set_array)
