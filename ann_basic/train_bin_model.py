@@ -75,7 +75,7 @@ data_set = [
 data_set_array = np.array(data_set)
 
 # Label data
-labels = np.array([0, 0, 1, 0])
+labels = np.array([0, 1, 0, 0])
 print(data_set_array.shape)
 
 
@@ -103,7 +103,7 @@ model.summary()
 
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=30, batch_size=1, verbose=1)
+model.fit(X, Y, epochs=20, batch_size=1, verbose=1)
 
 # test
 model.predict(data_set_array)
@@ -125,12 +125,12 @@ other_one_image = [
 other_two_image = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
+    [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
@@ -168,6 +168,6 @@ new_data_set = [
 
 new_data_set_array = np.array(new_data_set)
 
-print(model.predict(new_data_set_array))
+model.predict(new_data_set_array)
 
 
