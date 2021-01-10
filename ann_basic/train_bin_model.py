@@ -75,7 +75,7 @@ data_set = [
 data_set_array = np.array(data_set)
 
 # Label data
-labels = np.array([0, 1, 0, 0])
+labels = np.array([0, 0, 1, 0])
 print(data_set_array.shape)
 
 
@@ -86,7 +86,7 @@ Y = labels
 
 model = Sequential()
 model.add(
-    Dense(50, input_dim=input_dim, activation='relu')
+    Dense(15, input_dim=input_dim, activation='relu')
 )
 model.add(
     Dense(1, activation='sigmoid')
@@ -97,7 +97,7 @@ model.summary()
 
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=20, batch_size=1, verbose=1)
+model.fit(X, Y, epochs=15, batch_size=1, verbose=1)
 
 # test
 model.predict(data_set_array)
@@ -162,6 +162,6 @@ new_data_set = [
 
 new_data_set_array = np.array(new_data_set)
 
-model.predict(new_data_set_array)
+print(model.predict(new_data_set_array))
 
 
