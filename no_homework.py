@@ -36,5 +36,5 @@ print("blastoff!")
 # Basic programming patterns
 
 patterns = [
-    "sequential repeated conditional"
+    "sequential repeated conditional random"
 ]
