@@ -5,7 +5,7 @@ print(x)
 
 x = x + 1
 print(x)
-# Reserved words
+# Reserved words: never used this words to identify variables
 words = [
     "False  class  return   is   finally"
     "None   if      for   lambda  continue"
