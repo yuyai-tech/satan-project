@@ -32,3 +32,9 @@ while n > 0 :
     print(n)
     n = n - 1
 print("blastoff!")
+
+# Basic programming patterns
+
+patterns = [
+    "sequential repeated conditional"
+]
