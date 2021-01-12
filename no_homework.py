@@ -17,6 +17,7 @@ words = [
 ]
 
 # Conditional Stepts
+
 x = 5
 if x < 10:
     print("smaller")
@@ -24,3 +25,10 @@ if x > 20:
     print("bigger")
 print("finis")
 
+# Repeated Steps: loops (repeated steps) have iteration variables that change eacg time through a loop
+
+n = 5
+while n > 0 :
+    print(n)
+    n = n - 1
+print("blastoff!")
