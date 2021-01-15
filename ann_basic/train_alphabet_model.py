@@ -144,6 +144,8 @@ b_image_array = np.array(b_image)
 c_image_array = np.array(c_image)
 d_image_array = np.array(d_image)
 e_image_array = np.array(e_image)
+e1_image_array = np.array(e1_image)
+
 
 plt.imshow(a_image_array)
 plt.show()
