@@ -152,6 +152,9 @@ plt.show()
 # create data set
 data_set = [
     a_image_array.flatten(),
+    a1_image_array.flatten(),
+    a2_image_array.flatten(),
+    a3_image_array.flatten(),
     b_image_array.flatten(),
     c_image_array.flatten(),
     d_image_array.flatten(),
