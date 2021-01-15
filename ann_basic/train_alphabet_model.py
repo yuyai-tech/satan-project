@@ -137,6 +137,9 @@ e2_image = [
 # pre pros data
 
 a_image_array = np.array(a_image)
+a1_image_array = np.array(a1_image)
+a2_image_array = np.array(a2_image)
+a3_image_array = np.array(a3_image)
 b_image_array = np.array(b_image)
 c_image_array = np.array(c_image)
 d_image_array = np.array(d_image)
