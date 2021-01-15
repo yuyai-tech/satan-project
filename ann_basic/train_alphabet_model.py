@@ -161,6 +161,8 @@ data_set = [
     c_image_array.flatten(),
     d_image_array.flatten(),
     e_image_array.flatten(),
+    e1_image_array.flatten(),
+    e2_image_array.flatten()
 ]
 
 data_set_array = np.array(data_set)
