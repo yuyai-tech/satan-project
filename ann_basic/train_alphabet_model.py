@@ -1,8 +1,10 @@
+import os
+os.chdir("./ann_basic/")
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 import matplotlib.pyplot as plt
-from data import *
+from data.data import *
 
 # load data
 
@@ -34,7 +36,7 @@ q_image_array = np.array(q_image)
 r_image_array = np.array(r_image)
 s_image_array = np.array(s_image)
 t_image_array = np.array(t_image)
-u_image_array = np.array(u_image)
+u_image_array = np.array(u_)
 v_image_array = np.array(v_image)
 w_image_array = np.array(w_image)
 x_image_array = np.array(x_image)
@@ -84,7 +86,7 @@ data_set = [
 data_set_array = np.array(data_set)
 
 # label data
-labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ])
+labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0])
 print(data_set_array.shape)
 
 # create model
