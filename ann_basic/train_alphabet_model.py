@@ -451,14 +451,12 @@ data_set = [
     x_image_array.flatten(),
     y_image_array.flatten(),
     z_image_array.flatten(),
-
-
 ]
 
 data_set_array = np.array(data_set)
 
 # label data
-labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1])
+labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, ])
 print(data_set_array.shape)
 
 # create model
