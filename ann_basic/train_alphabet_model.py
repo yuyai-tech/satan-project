@@ -409,6 +409,7 @@ s_image_array = np.array(s_image)
 t_image_array = np.array(t_image)
 u_image_array = np.array(u_image)
 v_image_array = np.array(v_image)
+w_image_array = np.array(w_image)
 
 
 
