@@ -406,6 +406,7 @@ p_image_array = np.array(p_image)
 q_image_array = np.array(q_image)
 r_image_array = np.array(r_image)
 s_image_array = np.array(s_image)
+t_image_array = np.array(t_image)
 
 
 
