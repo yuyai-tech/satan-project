@@ -456,7 +456,7 @@ data_set = [
 data_set_array = np.array(data_set)
 
 # label data
-labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, ])
+labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ])
 print(data_set_array.shape)
 
 # create model
