@@ -430,7 +430,10 @@ data_set = [
     d_image_array.flatten(),
     e_image_array.flatten(),
     e1_image_array.flatten(),
-    e2_image_array.flatten()
+    e2_image_array.flatten(),
+    f_image_array.flatten(),
+    g_image_array.flatten(),
+
 ]
 
 data_set_array = np.array(data_set)
