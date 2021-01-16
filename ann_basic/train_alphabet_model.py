@@ -442,6 +442,11 @@ data_set = [
     o_image_array.flatten(),
     p_image_array.flatten(),
     q_image_array.flatten(),
+    r_image_array.flatten(),
+    s_image_array.flatten(),
+    t_image_array.flatten(),
+    u_image_array.flatten(),
+    v_image_array.flatten(),
 
 
 ]
