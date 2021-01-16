@@ -412,7 +412,7 @@ v_image_array = np.array(v_image)
 w_image_array = np.array(w_image)
 x_image_array = np.array(x_image)
 y_image_array = np.array(y_image)
-
+z_image_array = np.array(z_image)
 
 
 plt.imshow(a_image_array)
