@@ -447,6 +447,10 @@ data_set = [
     t_image_array.flatten(),
     u_image_array.flatten(),
     v_image_array.flatten(),
+    w_image_array.flatten(),
+    x_image_array.flatten(),
+    y_image_array.flatten(),
+    z_image_array.flatten(),
 
 
 ]
