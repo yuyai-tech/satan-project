@@ -401,6 +401,7 @@ i_image_array = np.array(i_image)
 j_image_array = np.array(j_image)
 k_image_array = np.array(k_image)
 m_image_array = np.array(m_image)
+n_image_array = np.array(n_image)
 
 plt.imshow(a_image_array)
 plt.show()
