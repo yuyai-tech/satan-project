@@ -439,6 +439,7 @@ data_set = [
     k_image_array.flatten(),
     m_image_array.flatten(),
     n_image_array.flatten(),
+    o_image_array.flatten(),
 
 ]
 
