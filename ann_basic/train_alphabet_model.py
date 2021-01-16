@@ -36,7 +36,7 @@ q_image_array = np.array(q_image)
 r_image_array = np.array(r_image)
 s_image_array = np.array(s_image)
 t_image_array = np.array(t_image)
-u_image_array = np.array(u_)
+u_image_array = np.array(u_image)
 v_image_array = np.array(v_image)
 w_image_array = np.array(w_image)
 x_image_array = np.array(x_image)
@@ -95,6 +95,7 @@ X = data_set_array
 Y = labels
 
 model = Sequential()
+model.add(Dense(50, input_dim=input_dim, activation='relu'))
 model.add(Dense(50, input_dim=input_dim, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
