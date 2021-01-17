@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 import matplotlib.pyplot as plt
-from data.data import *
+from ann_basic.data.data import *
 
 # load data
 
@@ -107,6 +107,9 @@ model.fit(X, Y, epochs=20, batch_size=1, verbose=1)
 
 # test
 model.predict(data_set_array)
+
+prediction_first = model.predict(data_set_array)
+
 
 # test with other data
 
