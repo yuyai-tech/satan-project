@@ -41,8 +41,8 @@ for value in train_data:
 train_data_flatten_array = np.array(train_data_flatten)
 
 # train data
-X = train_data
-Y = train_data_flatten_array
+X = train_data_flatten_array
+Y = binary_labels_array
 
-
-
+print(X.shape)
+print(Y.shape)
