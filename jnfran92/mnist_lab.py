@@ -1,7 +1,7 @@
 
 import tensorflow as tf
 import matplotlib.pyplot as plt
-
+import numpy as np
 
 data = tf.keras.datasets.mnist.load_data()
 
@@ -30,10 +30,19 @@ for value in train_labels:
     else:
         binary_labels.append(0)
 
+binary_labels_array = np.array(binary_labels)
+
+# flatten data
+train_data_flatten = []
+for value in train_data:
+    value_flatten = value.flatten()
+    train_data_flatten.append(value_flatten)
+
+train_data_flatten_array = np.array(train_data_flatten)
 
 # train data
 X = train_data
-# Y =
+Y = train_data_flatten_array
 
 
 
