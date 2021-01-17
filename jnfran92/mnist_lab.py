@@ -2,6 +2,8 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
 data = tf.keras.datasets.mnist.load_data()
 
@@ -46,3 +48,26 @@ Y = binary_labels_array
 
 print(X.shape)
 print(Y.shape)
+
+# model
+input_dim = X.shape[1]
+model = Sequential()
+model.add(
+    Dense(50, input_dim=input_dim, activation='relu')
+)
+model.add(
+    Dense(50, activation='relu')
+)
+model.add(
+    Dense(50, activation='relu')
+)
+model.add(
+    Dense(1, activation='sigmoid')
+)
+
+model.summary()
+
+
+# train model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(X, Y, epochs=20, batch_size=1, verbose=1)
