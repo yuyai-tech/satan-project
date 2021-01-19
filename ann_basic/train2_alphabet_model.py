@@ -15,3 +15,9 @@ data = from ann_basic.data.data import
 
 item_data = data[]
 
+dog_list = ["tasha", "coopy", "firualais", "quilla", "melo", "tarzan", "boby"]
+cat_list = ["maya", "perlita", "tutu", "spyke", "teodoro", "pancito", "chanchirri"]
+
+for dog in dog_list:
+    dog_with_last_name = dog + "diana"
+    dog_list_last_name.append(dog_with_last_name)
