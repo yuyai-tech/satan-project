@@ -37,6 +37,33 @@ last_name_list = ["andrade", "gonzales", "diaz"]
 full_name_list = []
 
 for name in name_list:
-    name_with_last_name = name + " " + str(last_name_list)
+    name_with_last_name = name + " " + str(last_name_list) ## EYE
     full_name_list.append(name_with_last_name)
+
+name_list[1]
+
+for i in range(3):
+    name = name_list[i]
+    print(name)
+    last_name = last_name_list[i]
+    print(last_name)
+    full_name = name + " " + last_name
+    print(full_name)
+
+full_name_list = []
+
+for i in range(3):
+    name = name_list[i]
+    last_name = last_name_list[i]
+    full_name = name + " " + last_name
+    print(full_name)
+    full_name_list.append(full_name)
+
+list_dog_added_cat = []
+
+for i in range(6):
+    dog = dog_list[i]
+    cat = cat_list[i]
+    dog_added_cat = dog + " " + cat
+    list_dog_added_cat.append(dog_added_cat)
 

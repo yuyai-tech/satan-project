@@ -1,5 +1,4 @@
-import os
-os.chdir("./ann_basic/")
+
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -8,6 +7,7 @@ from ann_basic.data.data import *
 
 # load data
 
+data = [a_image, a1_image, a2_image, a3_image,  ]
 
 # pre pros data
 
