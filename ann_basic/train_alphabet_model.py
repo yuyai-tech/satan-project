@@ -8,7 +8,6 @@ from ann_basic.data.data import *
 
 # load data
 
-data = [a_image, a1_image, a2_image, a3_image, b_image, c_image, d_image, e_image, e1_image, e2_image ]
 
 # pre pros data
 
