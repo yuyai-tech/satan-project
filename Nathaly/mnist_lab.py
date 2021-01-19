@@ -6,19 +6,21 @@ from tensorflow.keras.layers import Dense
 
 data = tf.keras.datasets.mnist.load_data()
 
-train_data = data [0][0]
+train_data = data[0][0]
 train_labels = data[0][1]
 
 print(train_data.shape)
 print(train_labels.shape)
 
+
 item_data = train_data[530]
-item_labels = train_labels[530]
-print(item_data)
+item_label = train_labels[530]
+print(item_data.shape)
 
 plt.imshow(item_data)
-plt.title('LABEL:' + str(item_labels))
+plt.title('LABEL: ' + str(item_label))
 plt.show()
+
 
 # creating labels
 binary_labels = []
@@ -68,3 +70,4 @@ model.summary()
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X, Y, epochs=20, batch_size=256, verbose=1)
+
