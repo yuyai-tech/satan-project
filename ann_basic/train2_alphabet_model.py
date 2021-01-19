@@ -29,3 +29,14 @@ cat_list_last_name = []
 for cat in cat_list:
     cat_with_last_name = cat + " " + "chunguis"
     cat_list_last_name.append(cat_with_last_name)
+
+name_list = ["mariana", "pedro", "karina"]
+
+last_name_list = ["andrade", "gonzales", "diaz"]
+
+full_name_list = []
+
+for name in name_list:
+    name_with_last_name = name + " " + str(last_name_list)
+    full_name_list.append(name_with_last_name)
+
