@@ -1,3 +1,5 @@
+import numpy as np
+
 from ann_basic.data.data import *
 
 ## Data
@@ -12,9 +14,15 @@ data_image = [ a_image, a1_image, a2_image, a3_image, b_image, c_image, d_image,
 
 data_image_array = []
 for image in data_image:
-    image_array = image.array()
+    image_array = np.array(image)
     data_image_array.append(image_array)
 
-##
+## data flatten
+
+data_image_flatten = []
+for image in data_image_array:
+    image_flatten = image.flatten()
+    data_image_flatten.append(image_flatten)
+
 
 
