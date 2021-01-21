@@ -62,3 +62,25 @@ for i in range(6):
     dog_added_cat = dog + " " + cat
     list_dog_added_cat.append(dog_added_cat)
 
+## list of list
+image = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+]
+
+## list of arrays
+
+image2 = [
+        np.array([0, 0, 0]),
+        np.array([0, 0, 0]),
+        np.array([0, 0, 0])
+]
+
+## array of array (neuron understand array the array did not list)
+
+image3 = np.array([
+        np.array([0, 0, 0]).flatten(),
+        np.array([0, 0, 0]).flatten(),
+        np.array([0, 0, 0]).flatten()
+])

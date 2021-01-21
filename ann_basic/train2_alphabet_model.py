@@ -24,5 +24,7 @@ for image in data_image_array:
     image_flatten = image.flatten()
     data_image_flatten.append(image_flatten)
 
+data_image_flatten_array = np.array(data_image_flatten)
+
 
 
