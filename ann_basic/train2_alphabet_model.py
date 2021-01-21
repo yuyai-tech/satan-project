@@ -26,5 +26,7 @@ for image in data_image_array:
 
 data_image_flatten_array = np.array(data_image_flatten)
 
+print(data_image_flatten_array.shape)
 
+## data labels
 
