@@ -1,4 +1,7 @@
+import matplotlib.pyplot as plt
 import numpy as np
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import Sequential
 
 from ann_basic.data.data import *
 
@@ -17,6 +20,9 @@ for image in data_image:
     image_array = np.array(image)
     data_image_array.append(image_array)
 
+plt.imshow(a_image)
+plt.show()
+
 ## data flatten
 
 data_image_flatten = []
@@ -31,4 +37,29 @@ print(data_image_flatten_array.shape)
 ## data labels
 
 labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0])
-print(data_set_array.shape)
+
+print(labels.shape)
+
+## create model
+
+input_dim = 10*11
+X = data_image_flatten_array
+Y = labels
+
+model = Sequential()
+model.add(Dense(50, input_dim=input_dim, activation='relu'))
+model.add(Dense(50, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+
+model.summary()
+
+# train model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(X, Y, epochs=20, batch_size=1, verbose=1)
+
+# test
+model.predict(data_image_flatten_array)
+
+prediction_first = model.predict(data_image_flatten_array)
+
+
