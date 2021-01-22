@@ -23,7 +23,7 @@ for image in data_image:
 plt.imshow(a_image)
 plt.show()
 
-## data flatten
+# data flatten
 
 data_image_flatten = []
 for image in data_image_array:
