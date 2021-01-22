@@ -34,7 +34,7 @@ data_image_flatten_array = np.array(data_image_flatten)
 
 print(data_image_flatten_array.shape)
 
-## data labels
+# data labels
 
 labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0])
 
