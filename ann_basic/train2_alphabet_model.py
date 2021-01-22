@@ -40,7 +40,7 @@ labels = np.array([1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0
 
 print(labels.shape)
 
-## create model
+# create model
 
 input_dim = 10*11
 X = data_image_flatten_array
