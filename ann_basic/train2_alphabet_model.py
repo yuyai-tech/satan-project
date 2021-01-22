@@ -13,7 +13,7 @@ data_image = [ a_image, a1_image, a2_image, a3_image, b_image, c_image, d_image,
                q_image, r_image, s_image, t_image, u_image, v_image, w_image,
                x_image, y_image, z_image ]
 
-## data array
+# data array
 
 data_image_array = []
 for image in data_image:
