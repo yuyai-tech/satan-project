@@ -94,20 +94,24 @@ plot_roc_curve(fpr, tpr)
 
 
 # test data
+
+# test labels
+test_labels_len = test_labels.shape[0]
+test_labels_reshaped = test_labels.reshape([test_labels_len, 1])
+
+mlb = MultiLabelBinarizer()
+multi_cat_binary_labels = mlb.fit_transform(test_labels_reshaped)
+
+
 X_test = test_data
-Y_test = (test_labels == 1).astype(int)
+Y_test = test_labels
 
 prediction_test = model.predict(X_test)
-auc = roc_auc_score(Y_test, prediction_test)
-print('Test AUC: %.2f' % auc)
+prediction_test_argmax = np.argmax(prediction_test, axis=1)
 
-fpr, tpr, thresholds = roc_curve(Y_test, prediction_test)
-plot_roc_curve(fpr, tpr)
+cm = confusion_matrix(Y_test, prediction_test_argmax)
 
-
-# validation data
-
-
-
-
-
+# tn, fp, fn, tp = confusion_matrix(Y_test, prediction_test_argmax).ravel()
+# cm = [[tp, fp], [fn, tn]]
+sns.heatmap(cm, annot=True, fmt = "d", cmap="Spectral")
+plt.show()
