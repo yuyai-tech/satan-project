@@ -24,6 +24,7 @@ data = tf.keras.datasets.mnist.load_data()
 train_data = data[0][0]
 train_labels = data[0][1]
 
+
 test_data = data[1][0]
 test_labels = data[1][1]
 
@@ -98,6 +99,32 @@ print('Train AUC: %f' % auc)
 
 fpr, tpr, thresholds = roc_curve(Y, prediction_train)
 plot_roc_curve(fpr, tpr)
+
+
+## assess test data
+
+# creating labels
+binary_labels_test = []
+for value in test_labels:
+    # print(value)
+    if value == 0:
+        binary_labels_test.append(1)
+    else:
+        binary_labels_test.append(0)
+
+binary_labels_array_test = np.array(binary_labels_test)
+
+# flatten data
+train_data_flatten_test = []
+for value in test_data:
+    value_flatten = value.flatten()
+    train_data_flatten_test.append(value_flatten)
+
+train_data_flatten_array_test = np.array(train_data_flatten_test)
+
+
+X_test = train_data_flatten_array_test
+Y_test = binary_labels_array_test
 
 
 
