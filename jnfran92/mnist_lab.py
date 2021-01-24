@@ -24,6 +24,11 @@ data = tf.keras.datasets.mnist.load_data()
 train_data = data[0][0]
 train_labels = data[0][1]
 
+test_data = data[1][0]
+test_labels = data[1][1]
+
+
+
 print(train_data.shape)
 print(train_labels.shape)
 
@@ -88,12 +93,12 @@ model.fit(X, Y, epochs=20, batch_size=256, verbose=1)
 prediction_train = model.predict(X)
 
 auc = roc_auc_score(Y, prediction_train)
-print('Train AUC: %.2f' % auc)
-
-
-
+print('Train AUC: %f' % auc)
 
 
 fpr, tpr, thresholds = roc_curve(Y, prediction_train)
 plot_roc_curve(fpr, tpr)
+
+
+
 
