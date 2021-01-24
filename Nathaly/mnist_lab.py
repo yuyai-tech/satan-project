@@ -1,8 +1,20 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_curve
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
+
+
+def plot_roc_curve(fpr, tpr):
+    plt.plot(fpr, tpr, color='orange', label='ROC')
+    plt.plot([0, 1], [0, 1], color='darkblue', linestyle='--')
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver Operating Characteristic (ROC) Curve')
+    plt.legend()
+    plt.show()
 
 data = tf.keras.datasets.mnist.load_data()
 
@@ -68,3 +80,19 @@ model.summary()
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X, Y, epochs=20, batch_size=256, verbose=1)
 
+
+
+## assess train data
+
+prediction_train = model.predict(X)
+
+auc = roc_auc_score(Y, prediction_train)
+
+print('Train AUC: %.f' % auc)
+
+fpr, tpr, thresholds = roc_curve(Y, prediction_train)
+plot_roc_curve(fpr, tpr)
+
+## Data test
+test_data = data[1][0]
+test_labels =
