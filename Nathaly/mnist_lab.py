@@ -64,10 +64,7 @@ print(Y.shape)
 input_dim = X.shape[1]
 model = Sequential()
 model.add(
-    Dense(3, input_dim=input_dim, activation='relu')
-)
-model.add(
-    Dense(3, activation='relu')
+    Dense(2, input_dim=input_dim, activation='relu')
 )
 model.add(
     Dense(1, activation='sigmoid')
@@ -78,7 +75,7 @@ model.summary()
 
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=20, batch_size=256, verbose=1)
+model.fit(X, Y, epochs=30, batch_size=300, verbose=1)
 
 
 
@@ -94,5 +91,41 @@ fpr, tpr, thresholds = roc_curve(Y, prediction_train)
 plot_roc_curve(fpr, tpr)
 
 ## Data test
+
 test_data = data[1][0]
-test_labels =
+test_labels = data[1][1]
+
+
+## assess test data
+# creating labels
+binary_labels_test = []
+for value in test_labels:
+    # print(value)
+    if value == 0:
+        binary_labels_test.append(1)
+    else:
+        binary_labels_test.append(0)
+
+binary_labels_array_test = np.array(binary_labels_test)
+
+# flatten data
+train_data_flatten_test = []
+for value in test_data:
+    value_flatten = value.flatten()
+    train_data_flatten_test.append(value_flatten)
+
+train_data_flatten_array_test = np.array(train_data_flatten_test)
+
+
+X_test = train_data_flatten_array_test
+Y_test = binary_labels_array_test
+
+# assess
+prediction_test = model.predict(X_test)
+
+auc_test = roc_auc_score(Y_test, prediction_test)
+print('Train AUC: %f' % auc_test)
+
+
+fpr, tpr, thresholds = roc_curve(Y_test, prediction_test)
+plot_roc_curve(fpr, tpr)
