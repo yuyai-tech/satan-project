@@ -1,8 +1,8 @@
-import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
-from tensorflow.keras.models import Sequential
+import tensorflow as tf
 from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import Sequential
 
 data = tf.keras.datasets.mnist.load_data()
 
@@ -13,8 +13,8 @@ print(train_data.shape)
 print(train_labels.shape)
 
 
-item_data = train_data[530]
-item_label = train_labels[530]
+item_data = train_data[300]
+item_label = train_labels[300]
 print(item_data.shape)
 
 plt.imshow(item_data)
@@ -52,13 +52,10 @@ print(Y.shape)
 input_dim = X.shape[1]
 model = Sequential()
 model.add(
-    Dense(50, input_dim=input_dim, activation='relu')
+    Dense(3, input_dim=input_dim, activation='relu')
 )
 model.add(
-    Dense(50, activation='relu')
-)
-model.add(
-    Dense(50, activation='relu')
+    Dense(3, activation='relu')
 )
 model.add(
     Dense(1, activation='sigmoid')
