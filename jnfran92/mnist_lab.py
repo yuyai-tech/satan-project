@@ -101,8 +101,8 @@ fpr, tpr, thresholds = roc_curve(Y, prediction_train)
 plot_roc_curve(fpr, tpr)
 
 
-## assess test data
 
+## assess test data
 # creating labels
 binary_labels_test = []
 for value in test_labels:
@@ -126,6 +126,13 @@ train_data_flatten_array_test = np.array(train_data_flatten_test)
 X_test = train_data_flatten_array_test
 Y_test = binary_labels_array_test
 
+# assess
+prediction_test = model.predict(X_test)
+
+auc_test = roc_auc_score(Y_test, prediction_test)
+print('Train AUC: %f' % auc_test)
 
 
+fpr, tpr, thresholds = roc_curve(Y_test, prediction_test)
+plot_roc_curve(fpr, tpr)
 
