@@ -5,17 +5,36 @@ import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
+from sklearn.metrics import roc_curve
+from sklearn.metrics import roc_auc_score
+
+
+def plot_roc_curve(fpr, tpr):
+    plt.plot(fpr, tpr, color='orange', label='ROC')
+    plt.plot([0, 1], [0, 1], color='darkblue', linestyle='--')
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver Operating Characteristic (ROC) Curve')
+    plt.legend()
+    plt.show()
+
+
 data = tf.keras.datasets.mnist.load_data()
 
 train_data = data[0][0]
 train_labels = data[0][1]
 
+test_data = data[1][0]
+test_labels = data[1][1]
+
+
+
 print(train_data.shape)
 print(train_labels.shape)
 
 
-item_data = train_data[530]
-item_label = train_labels[530]
+item_data = train_data[300]
+item_label = train_labels[300]
 print(item_data.shape)
 
 plt.imshow(item_data)
@@ -53,13 +72,10 @@ print(Y.shape)
 input_dim = X.shape[1]
 model = Sequential()
 model.add(
-    Dense(50, input_dim=input_dim, activation='relu')
+    Dense(1, input_dim=input_dim, activation='relu')
 )
 model.add(
-    Dense(50, activation='relu')
-)
-model.add(
-    Dense(50, activation='relu')
+    Dense(1, activation='relu')
 )
 model.add(
     Dense(1, activation='sigmoid')
@@ -71,5 +87,18 @@ model.summary()
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X, Y, epochs=20, batch_size=256, verbose=1)
+
+
+# assess train data
+prediction_train = model.predict(X)
+
+auc = roc_auc_score(Y, prediction_train)
+print('Train AUC: %f' % auc)
+
+
+fpr, tpr, thresholds = roc_curve(Y, prediction_train)
+plot_roc_curve(fpr, tpr)
+
+
 
 
