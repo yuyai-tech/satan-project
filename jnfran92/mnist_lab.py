@@ -84,15 +84,16 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 model.fit(X, Y, epochs=20, batch_size=256, verbose=1)
 
 
-# train data
+# assess train data
 prediction_train = model.predict(X)
+
 auc = roc_auc_score(Y, prediction_train)
 print('Train AUC: %.2f' % auc)
 
+
+
+
+
 fpr, tpr, thresholds = roc_curve(Y, prediction_train)
 plot_roc_curve(fpr, tpr)
-
-
-
-
 
