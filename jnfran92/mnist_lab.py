@@ -73,10 +73,13 @@ print(Y.shape)
 input_dim = X.shape[1]
 model = Sequential()
 model.add(
-    Dense(1, input_dim=input_dim, activation='relu')
+    Dense(4, input_dim=input_dim, activation='relu')
 )
 model.add(
-    Dense(1, activation='relu')
+    Dense(3, activation='relu')
+)
+model.add(
+    Dense(2, activation='relu')
 )
 model.add(
     Dense(1, activation='sigmoid')
@@ -87,7 +90,7 @@ model.summary()
 
 # train model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=20, batch_size=256, verbose=1)
+model.fit(X, Y, epochs=30, batch_size=128, verbose=1)
 
 
 # assess train data
