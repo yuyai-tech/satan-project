@@ -73,7 +73,7 @@ image = [
 
 image2 = [
         np.array([0, 0, 0]),
-        np.array([0, 0, 0]),
+        np.array([0, 0, 0])
         np.array([0, 0, 0])
 ]
 
@@ -84,3 +84,7 @@ image3 = np.array([
         np.array([0, 0, 0]).flatten(),
         np.array([0, 0, 0]).flatten()
 ])
+
+## NAMES
+
+name1_list = ["Diana", "Juan", "Mel", "Vale", "Kimi"]
