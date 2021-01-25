@@ -99,4 +99,8 @@ for i in range(6):
     complete = name1 + " " + last_name2
     complete_name.append(complete)
 
+for name in complete_name:
+    print(name)
+
+
 
