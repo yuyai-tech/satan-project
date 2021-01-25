@@ -87,4 +87,8 @@ image3 = np.array([
 
 ## NAMES
 
-name1_list = ["Diana", "Juan", "Mel", "Vale", "Kimi"]
+name1_list = ["Diana", "Juan", "Mel", "Vale", "Kimi", "Tasha"]
+
+last_name2_list = ["Altamirano", "Chango", "Paredes", "Rueda", "Morocho", "Diaz"]
+
+for i in range(6):
