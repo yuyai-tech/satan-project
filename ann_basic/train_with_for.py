@@ -91,4 +91,12 @@ name1_list = ["Diana", "Juan", "Mel", "Vale", "Kimi", "Tasha"]
 
 last_name2_list = ["Altamirano", "Chango", "Paredes", "Rueda", "Morocho", "Diaz"]
 
+complete_name = []
+
 for i in range(6):
+    name1 = name1_list[i]
+    last_name2 = last_name2_list[i]
+    complete = name1 + " " + last_name2
+    complete_name.append(complete)
+
+
