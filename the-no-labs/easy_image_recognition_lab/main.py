@@ -73,4 +73,15 @@ cm = confusion_matrix(predictions_expected, predictions_current)
 sns.heatmap(cm, annot=True, fmt="d", cmap="Spectral")
 plt.show()
 
-
+# plot results
+labels_title = list(image_data.class_indices.keys())
+plt.figure(figsize=(10, 9))
+plt.subplots_adjust(hspace=0.5)
+for n in range(25):
+    plt.subplot(5, 5, n+1)
+    plt.imshow(image_data[0][0][n])
+    color = "green" if predictions_current[n] == predictions_expected[n] else "red"
+    plt.title("Pred. as: " + labels_title[predictions_current[n]], color=color)
+    plt.axis('off')
+_ = plt.suptitle("Model predictions (green: correct, red: incorrect)")
+plt.show()
