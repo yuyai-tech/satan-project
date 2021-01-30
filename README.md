@@ -1,25 +1,11 @@
-# Satan Project!
+# Satan Project :japanese_ogre: !
 
-The best Ever!
+## 101 Python AI Course
 
-# What we do?
+Python **BASIC** Course for Data Science and Machine Learning
 
-whatever
+## Content
 
-## Team:
-
-Diana: "Life is short not to live it"
-
-Andrea: "Hello friends" "jajajaj"
-
-Jorch: "chch why is it english?"bvbbvb
-
-Juan: "hello i am juan alsidjuawoieuwqewqewq"
-
-Martin: "hello"
-
-## Milestones:
-
-- one
-- two 
-
+- `legacy`: old team's files.
+- `the-no-labs`: Course material of each session
+- `slides`: Slides of ear session.
