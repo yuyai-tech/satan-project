@@ -1,19 +1,13 @@
 
 import matplotlib.pylab as plt
-from tensorflow.keras import layers
-import tensorflow as tf
-import tensorflow_hub as hub
-from tensorflow_hub.keras_layer import KerasLayer
 import numpy as np
-import PIL.Image as Image
-from tensorflow.keras.models import Sequential
+import seaborn as sns
+from PIL import ImageFile
+from sklearn.metrics import confusion_matrix
 from tensorflow.keras.layers import Dense, Input, Flatten
+from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
-
-from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 
