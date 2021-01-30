@@ -8,4 +8,4 @@ Python **BASIC** Course for Data Science and Machine Learning
 
 - `legacy`: old team's files.
 - `the-no-labs`: Course material of each session
-- `slides`: Slides of ear session.
+- `slides`: Slides of each session.
