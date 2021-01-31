@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Input, Flatten
-
+from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.metrics import roc_curve
 from sklearn.metrics import roc_auc_score
 
@@ -29,6 +29,18 @@ test_labels = data[1][1]
 
 print(train_data.shape)
 print(train_labels.shape)
+
+number_of_cats = np.max(train_labels) + 1
+print(number_of_cats)
+
+# multi cat labels
+train_labels_len = train_labels.shape[0]
+train_labels_reshaped = train_labels.reshape([train_labels_len, 1])
+
+mlb = MultiLabelBinarizer()
+multi_cat_binary_labels = mlb.fit_transform(train_labels_reshaped)
+
+
 
 
 item_data = train_data[530]
@@ -70,32 +82,6 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 model.fit(X, Y, epochs=3, batch_size=32, verbose=1)
 
 
-# img_file = './model_arch.png'
-# tf.keras.utils.plot_model(model, to_file=img_file, show_shapes=True, show_layer_names=True)
-
-
-# train data
-prediction_train = model.predict(X)
-auc = roc_auc_score(Y, prediction_train)
-print('Train AUC: %.2f' % auc)
-
-fpr, tpr, thresholds = roc_curve(Y, prediction_train)
-plot_roc_curve(fpr, tpr)
-
-
-# test data
-X_test = test_data
-Y_test = (test_labels == 5).astype(int)
-
-prediction_test = model.predict(X_test)
-auc = roc_auc_score(Y_test, prediction_test)
-print('Test AUC: %.2f' % auc)
-
-fpr, tpr, thresholds = roc_curve(Y_test, prediction_test)
-plot_roc_curve(fpr, tpr)
-
-
-# validation data
 
 
 
