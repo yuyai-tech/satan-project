@@ -42,7 +42,6 @@ print(X.shape)
 print(Y.shape)
 
 # model
-
 model = Sequential()
 model.add(
     Input(shape=(28, 28, ))
@@ -51,7 +50,13 @@ model.add(
     Flatten()
 )
 model.add(
-    Dense(10, activation='relu')
+    Dense(30, activation='relu')
+)
+model.add(
+    Dense(30, activation='relu')
+)
+model.add(
+    Dense(30, activation='relu')
 )
 model.add(
     Dense(10, activation='softmax')
@@ -61,7 +66,7 @@ model.summary()
 
 # train model
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=20, batch_size=128, verbose=1)
+model.fit(X, Y, epochs=10, batch_size=8, verbose=1)
 
 
 
