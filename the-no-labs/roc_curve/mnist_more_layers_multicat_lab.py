@@ -51,39 +51,30 @@ model.add(
     Flatten()
 )
 model.add(
-    Dense(300, activation='relu')
+    Dense(10, activation='relu')
 )
 model.add(
-    Dense(300, activation='relu')
-)
-model.add(
-    Dense(10, activation='sigmoid')
+    Dense(10, activation='softmax')
 )
 model.summary()
 
 
 # train model
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-model.fit(X, Y, epochs=10, batch_size=256, verbose=1)
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(X, Y, epochs=20, batch_size=128, verbose=1)
 
 
 
 # test labels
-test_labels_len = test_labels.shape[0]
-test_labels_reshaped = test_labels.reshape([test_labels_len, 1])
-
-mlb = MultiLabelBinarizer()
-multi_cat_binary_labels_test = mlb.fit_transform(test_labels_reshaped)
-
-
 X_test = test_data
-Y_test = multi_cat_binary_labels_test
 
 prediction_test = model.predict(X_test)
 prediction_test_argmax = np.argmax(prediction_test, axis=1)
 
-cm = confusion_matrix(Y_test, prediction_test_argmax)
+cm = confusion_matrix(test_labels, prediction_test_argmax)
 sns.heatmap(cm, annot=True, fmt="d", cmap="Spectral")
 plt.show()
 
+max_metric = np.diag(cm)
+print("SCORE: " + str(np.sum(max_metric)))
 
