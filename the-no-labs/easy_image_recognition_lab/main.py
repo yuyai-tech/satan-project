@@ -4,7 +4,7 @@ import numpy as np
 import seaborn as sns
 from PIL import ImageFile
 from sklearn.metrics import confusion_matrix
-from tensorflow.keras.layers import Dense, Input, Flatten
+from tensorflow.keras.layers import Dense, Input, Flatten, Conv2D
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -24,7 +24,7 @@ image_data = image_generator.flow_from_directory(
 
 
 # print image
-n_image_to_show = 6
+n_image_to_show = 30
 data_to_show = image_data[0][0][n_image_to_show]
 label_to_show = image_data[0][1][n_image_to_show]
 plt.imshow(data_to_show)
@@ -39,13 +39,13 @@ model.add(
     Input(shape=(64, 64, 3, ))
 )
 model.add(
+    Conv2D(10, 4, activation='relu')
+)
+model.add(
     Flatten()
 )
 model.add(
-    Dense(1000, activation='relu')
-)
-model.add(
-    Dense(1000, activation='relu')
+    Dense(100, activation='relu')
 )
 model.add(
     Dense(3, activation='sigmoid')
